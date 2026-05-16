@@ -1,1 +1,1 @@
-﻿# Uso_De_IA_Para_Integração_Da_IA_Em_Um_Site
+﻿#Desafio API ChaGPT
