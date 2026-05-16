@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu ChatGPT com Flask</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 500px; margin: 60px auto; padding: 20px; background-color: #f4f4f9; }
+        form { display: flex; flex-direction: column; }
+        textarea { height: 100px; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc; }
+        button { background-color: #10a37f; color: white; border: none; padding: 12px; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        .box-resposta { margin-top: 20px; padding: 15px; background: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+
+    <h2>Pergunte ao ChatGPT:</h2>
+    <form action="/perguntar" method="POST">
+        <textarea name="mensagem" placeholder="Digite sua dúvida aqui..." required></textarea>
+        <button type="submit">Enviar Pergunta</button>
+    </form>
+
+    {% if resposta %}
+    <div class="box-resposta">
+        <strong>Resposta:</strong>
+        <p>{{ resposta }}</p>
+    </div>
+    {% endif %}
+
+</body>
+</html>
